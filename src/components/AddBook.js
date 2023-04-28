@@ -31,7 +31,7 @@ const AddBook = () => {
 
   const sendRequest = async () => {
     await axios
-      .post(`${process.env.REACT_APP_BACKEND_URL}/books`, {
+      .post(`https://bookstore-guddu.cyclic.app/books`, {
         name: String(inputs.name),
         author: String(inputs.author),
         description: String(inputs.description),

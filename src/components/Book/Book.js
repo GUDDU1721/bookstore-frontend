@@ -7,7 +7,7 @@ const Book = (props) => {
   const { _id, name, author, description, price, image } = props.book;
   const deleteHandler = async () => {
     await axios
-      .delete(`${process.env.REACT_APP_BACKEND_URL}/books/${_id}`)
+      .delete(`https://bookstore-guddu.cyclic.app/books/${_id}`)
       .then((res) => res.data)
       .then(() => history("/"))
       .then(() => history("/books"))

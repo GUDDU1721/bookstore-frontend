@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import "./Book.css";
 import axios from "axios";
 import Book from "./Book";
-const URL = `${process.env.REACT_APP_BACKEND_URL}/books`;
+const URL = `https://bookstore-guddu.cyclic.app/books`;
 const fetchHandler = async () => {
   return await axios.get(URL).then((res) => res.data);
 };

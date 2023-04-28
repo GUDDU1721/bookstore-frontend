@@ -18,7 +18,7 @@ const BookDetail = () => {
   useEffect(() => {
     const fetchHandler = async () => {
       await axios
-        .get(`${process.env.REACT_APP_BACKEND_URL}/books/${id}`)
+        .get(`https://bookstore-guddu.cyclic.app/books/${id}`)
         .then((res) => res.data)
         .then((data) => setInputs(data.book));
     };
@@ -27,7 +27,7 @@ const BookDetail = () => {
 
   const sendRequest = async () => {
     await axios
-      .put(`${process.env.REACT_APP_BACKEND_URL}/books/${id}`, {
+      .put(`https://bookstore-guddu.cyclic.app/books/${id}`, {
         name: String(inputs.name),
         author: String(inputs.author),
         description: String(inputs.description),
